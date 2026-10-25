@@ -1,0 +1,23 @@
+{
+  "name": "@kanchingyg/portgraph",
+  "version": "0.1.0",
+  "description": "Local port topology TUI and MCP server for dev stacks, Docker, and local LLM servers",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/cli.ts",
+    "./bridge": "./src/bridge.ts"
+  },
+  "publish": {
+    "include": [
+      "src/**/*.ts",
+      "LICENSE",
+      "README.md",
+      "SKILL.md",
+      "jsr.json"
+    ],
+    "exclude": [
+      "src/**/*.test.ts",
+      "src/**/*.spec.ts"
+    ]
+  }
+}

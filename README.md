@@ -6,10 +6,6 @@
 [![JSR Score](https://jsr.io/badges/@kanchingyg/portgraph/score)](https://jsr.io/@kanchingyg/portgraph/score)
 [![Rust](https://img.shields.io/badge/engine-Rust_%2B_TypeScript-dea584)](https://github.com/kanchingyg/portgraph)
 [![license](https://img.shields.io/github/license/kanchingyg/portgraph)](https://github.com/kanchingyg/portgraph/blob/HEAD/LICENSE)
-[![npm](https://img.shields.io/npm/v/portgraph)](https://www.npmjs.com/package/portgraph)
-[![JSR](https://jsr.io/badges/@kanchingyg/portgraph)](https://jsr.io/@kanchingyg/portgraph)
-[![Rust](https://img.shields.io/badge/engine-Rust-dea584)](https://github.com/kanchingyg/portgraph)
-[![license](https://img.shields.io/github/license/kanchingyg/portgraph)](https://github.com/kanchingyg/portgraph/blob/HEAD/LICENSE)
 
 **One line:** `npx portgraph` (or `bunx portgraph`): live local port topology (Docker + Ollama/LM Studio/vLLM) as a terminal TUI and stdio MCP server.
 
@@ -52,14 +48,6 @@ npx portgraph --mcp
 npx portgraph --mcp --allow-write
 npx portgraph --mcp --dry-run   # blocks mutating tools only
 ```
-
-## MCP tools
-
-| Tool | Purpose |
-| --- | --- |
-| `get_local_topology` | Active listening ports, PIDs, Docker mappings, and local LLM signature tags |
-| `who_owns_port` | Owning process and command line for a specific listening port |
-| `kill_port_owner` | Terminate port owner (`confirm: true`; requires `--allow-write`, blocked under `--dry-run`) |
 
 ## MCP Tools Reference
 

@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/**
+ * CLI and MCP entrypoint for `portgraph`.
+ *
+ * @module
+ */
 import { spawnSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";

@@ -1,3 +1,13 @@
+/**
+ * MCP stdio bridge and port-scan helpers for `portgraph`.
+ *
+ * @example
+ * ```ts
+ * import { dispatchMcpMessage, setGuards } from "jsr:@kanchingyg/portgraph/bridge";
+ * ```
+ *
+ * @module
+ */
 import { createHash } from "node:crypto";
 
 /** Constant `DEFAULT_N_CTX` defining default n ctx. */

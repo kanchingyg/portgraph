@@ -5,7 +5,7 @@ use std::process::Command;
 
 use serde::{Deserialize, Serialize};
 
-pub const VERSION: &str = "0.1.0";
+pub const VERSION: &str = "0.1.1";
 
 pub fn llm_signature_ports() -> HashMap<u16, &'static str> {
     HashMap::from([

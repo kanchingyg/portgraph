@@ -1,4 +1,11 @@
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
+
+const PKG_VERSION = JSON.parse(
+  readFileSync(join(dirname(fileURLToPath(import.meta.url)), "..", "package.json"), "utf8"),
+).version as string;
 import { createServer } from "node:net";
 import {
   hijackStdoutForMcp,
@@ -48,7 +55,7 @@ describe("who_owns_port + topology", () => {
 });
 
 describe("MCP JSON-RPC", () => {
-  const meta = { name: "portgraph", version: "0.1.0" };
+  const meta = { name: "portgraph", version: PKG_VERSION };
   const tools = createPortgraphTools();
   beforeEach(() => {
     jsonRpcFrameLog.length = 0;
@@ -125,7 +132,7 @@ describe("Blindaje 4 stdout hijack", () => {
     ] as ReturnType<typeof createPortgraphTools>;
     dispatchMcpMessage(
       { jsonrpc: "2.0", id: 1, method: "tools/call", params: { name: "echo_path", arguments: { path: "D:\\proj\\app.ts" } } },
-      { name: "portgraph", version: "0.1.0" },
+      { name: "portgraph", version: PKG_VERSION },
       tools,
       { pathToWsl: true },
     );

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.kanchingyg/portgraph",
+  "description": "Local port topology TUI and MCP server for dev stacks, Docker, and local LLM servers",
+  "repository": {
+    "url": "https://github.com/kanchingyg/portgraph",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "portgraph",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
